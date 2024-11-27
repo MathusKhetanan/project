@@ -1,11 +1,12 @@
 
-<?php
-    include("config.php");
-	include("include/header.php");
 
-	include("include/navbarguest.php");
+<?php
+    include("../config.php");
+	include("../include/headeradmin.php");
+	include("../include/navbaradmin.php");
 	
     session_start();
+    $use_email = $_SESSION['use_email'];
     $sql = "SELECT * FROM tbuser";
     $re = $conn->query($sql);
     if ($re->num_rows > 0) { 
@@ -14,6 +15,7 @@
     <?php
     } 
     ?>
+<div class = "row mt-5" >
 <div class="container text-center">
     <h5 class="text-primary mt-4">ข่าวประชาสัมพันธ์</h5>
 </div>
@@ -37,4 +39,5 @@
         ?>
  
   </table>
-<?php include("include/footer.php"); ?>
+	</div>
+<?php include("../include/footeradmin.php"); ?>
