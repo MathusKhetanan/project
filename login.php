@@ -21,7 +21,7 @@ if(isset($_POST['btnlogin'])){
         $_SESSION['use_name'] = $use_name;
         $_SESSION['use_level'] = $as['use_level'];
 
-        header("location:" . ($as['use_level'] === 'admin' ? 'admin.php' : 'home.php'));
+        header("location:" . ($as['use_level'] === 'admin' ? 'admin/admin.php' : 'home.php'));
         exit();
     }
 }
